@@ -1,1 +1,130 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Gym</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file -->
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="GymLogo.png" alt="Gym Logo"> <!-- Add the logo image here -->
+            </div>
+            <h1>Alpha Gym</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Alpha Gym</h2>
+            <p>Your fitness journey starts here.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service">
+                    <h3>Personal Training</h3>
+                    <p>Get personalized training plans and one-on-one sessions with our expert trainers.</p>
+                </div>
+                <div class="service">
+                    <h3>Group Classes</h3>
+                    <p>Join our group classes and stay motivated with others.</p>
+                </div>
+                <div class="service">
+                    <h3>Facilities</h3>
+                    <p>Our facilities include a sauna room and equipment suitable for powerlifting, bodybuilding, and even strongman events, including dumbbells ranging from 1-80kg.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers" class="trainers">
+        <div class="container">
+            <h2>Meet Our Coaches</h2>
+            <div class="trainer-list">
+                <div class="trainer">
+                    <h3>Richy Gangel</h3>
+                    <p>Offers 1-1 sessions, group coaching, online coaching, and training programs.</p>
+                    <p>Contact: RGPT@hotmail.co.uk</p>
+                </div>
+                <div class="trainer">
+                    <h3>Adam Bainbridge</h3>
+                    <p>He is a 1-1 PT and offers strength and strongman coaching alongside online coaching.</p>
+                    <p>Contact: Adam0123@hotmail.co.uk</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="membership" class="membership">
+        <div class="container">
+            <h2>Membership Plans</h2>
+            <div class="membership-list">
+                <a href="https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001A1T9JP8SJ4Q7DVGEGCWYMVGGEC&initial=%2Fcollect-customer-details" class="membership-plan">
+                    <h3>Standard Membership</h3>
+                    <p>£30 monthly.</p>
+                </a>
+                <a href="https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001A1TM9DNB6HX8MBMT4VZ7EQY5YB&initial=%2Fcollect-customer-details" class="membership-plan">
+                    <h3>Couples Membership</h3>
+                    <p>£50 monthly.</p>
+                </a>
+                <a href="https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001A1TQMNQ23XD10F7HGCA3H7KV3W&initial=%2Fcollect-customer-details" class="membership-plan">
+                    <h3>Weekend Pass (Fri-Sun)</h3>
+                    <p>£15 one-time payment.</p>
+                </a>
+                <a href="https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001A1TPKF9ZV38FGYDE9HW8R01Q0Q&initial=%2Fcollect-customer-details" class="membership-plan">
+                    <h3>Day Pass (5:30am-10:00pm)</h3>
+                    <p>£6.50 one-time payment.</p>
+                </a>
+                <a href="https://pay.gocardless.com/billing/static/collect-customer-details?id=BRF001A1TN6H1T1AJY7JBWRBYGE89QYT&initial=%2Fcollect-customer-details" class="membership-plan">
+                    <h3>Monthly</h3>
+                    <p>£15 for your first month.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="process_contact.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alpha Gym. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
