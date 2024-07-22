@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php'; // Make sure this path is correct
+require "E:\GitHub\AlphaGym\PHPMailer-6.9.1\composer.json"; // Make sure this path is correct
 
 header('Content-Type: application/json');
 
@@ -30,7 +30,7 @@ try {
     $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP server
     $mail->SMTPAuth = true;
     $mail->Username = 'olicass100@gmail.com'; // Replace with your SMTP username
-    $mail->Password = '96Kenton*'; // Replace with your SMTP password
+    $mail->Password = ''; // Replace with your SMTP password
     $mail->SMTPSecure = 'tls'; // Use 'tls' or 'ssl' as required by your SMTP server
     $mail->Port = 587; // Use 587 for TLS, 465 for SSL
 
