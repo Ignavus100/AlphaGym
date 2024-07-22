@@ -1,30 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    const messageDiv = document.getElementById('form-message');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-
-        fetch('process_contact.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                messageDiv.textContent = 'Your message has been sent successfully!';
-                messageDiv.className = 'form-message success';
-                form.reset();
-            } else {
-                messageDiv.textContent = data.error || 'An error occurred. Please try again.';
-                messageDiv.className = 'form-message error';
-            }
-        })
-        .catch(error => {
-            messageDiv.textContent = 'An error occurred. Please try again.';
-            messageDiv.className = 'form-message error';
-        });
-    });
-});
+function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "olicass100@gmail.com",
+        Password : "96Kenton*",
+        To : 'them@website.com',
+        From : document.getElementById("email").value,
+        Subject : "new contact form enquiry",
+        Body : "Name: " + document.getElementById("name").value
+            + "<br> Email: " + document.getElementById("email").value
+            + "<br> message: " + document.getElementById("message").value
+    }).then(
+      message => alert("message sent sucesfully")
+    );
+}
