@@ -5,10 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        // Retrieve form data
         const formData = new FormData(form);
 
-        // Send form data using AJAX
         fetch('process_contact.php', {
             method: 'POST',
             body: formData
@@ -20,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 messageDiv.className = 'form-message success';
                 form.reset();
             } else {
-                messageDiv.textContent = 'An error occurred. Please try again.';
+                messageDiv.textContent = data.error || 'An error occurred. Please try again.';
                 messageDiv.className = 'form-message error';
             }
         })
