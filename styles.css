@@ -68,8 +68,8 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('team_photo.png') no-repeat center center/cover;
-    aspect-ratio: 25/5;
+    background: url('gym_photo.png') no-repeat center center/cover;
+    /*aspect-ratio: 2/1;*/
     color: #fff;
     text-align: center;
     padding: 4rem 0;
@@ -321,7 +321,7 @@ footer p {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 200px) {
     header .container {
         flex-direction: column;
         text-align: center;
