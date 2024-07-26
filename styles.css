@@ -307,6 +307,10 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.map{
+    width: 100vw;
+}
+
 /* Footer */
 footer {
     background: #333;
