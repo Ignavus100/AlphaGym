@@ -26,6 +26,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 header .container {
